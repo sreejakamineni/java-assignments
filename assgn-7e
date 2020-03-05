@@ -1,0 +1,31 @@
+package com.company;
+class Upper {
+    class Inner1 {
+        public Inner1(int i)
+        {
+            System.out.println(i);
+        }
+    }
+}
+    class Upper2 extends Upper
+    {
+    class Inner2 extends Upper.Inner1
+    {
+          public Inner2(int i)
+          {
+              super(10);
+              System.out.println(i);
+          }
+    }
+}
+public class Main {
+
+    public static void main(String[] args) {
+	// write your code here
+         Upper2.Inner2 i = new Upper2(). new Inner2(20);
+
+
+
+    }
+}
+

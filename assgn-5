@@ -1,0 +1,46 @@
+package yourname.assignment;
+class data
+{
+	int i;
+	char ch;
+	public void print()
+	{
+		System.out.println("i value : "+i);
+		System.out.println("ch value : "+ch);
+	}
+/*	public void printData()
+	{
+		int a;
+		int b;
+		System.out.println("a value : "+a);
+		System.out.println("b value : "+b);
+	}*/
+}
+class singleton
+{
+	String s;
+	public static singleton meth(String s)
+	{
+	    singleton si = new singleton();
+	    si.s=s;
+	    return si;
+	}
+	public void normal()
+	{
+		System.out.println("string is : "+s);
+	}
+}
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		data d = new data();
+		d.print();
+		//d.printData();
+      singleton sg = singleton.meth("Sreeja");
+      	sg.normal();
+	}
+
+}
+
