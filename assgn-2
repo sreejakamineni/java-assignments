@@ -1,22 +1,22 @@
 package com.company;
 class Alpha
 {
-    public void function(String s)
+    public void function(String s)  // this function takes the given string 
     {
 
         int val,t;
         int count =0;
         for(int i=0;i<s.length();i++)
         {
-            val= s.indexOf(s.charAt(i));
-            t= s.indexOf(val,s.charAt(i));
-            if(t<val)
+            val= s.indexOf(s.charAt(i)); //here val stores the index value where it first occured
+            t= s.indexOf(val,s.charAt(i));// it checks for the requried chareter index after val index
+            if(t<val) // checking if it is unique 
             {
                 count++;
             }
 
         }
-        if(count==26)
+        if(count==26)  // if the count is 26 it means all the alphabets are present
         {
             System.out.println("true");
         }
