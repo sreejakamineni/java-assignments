@@ -8,13 +8,13 @@ class data
 		System.out.println("i value : "+i);
 		System.out.println("ch value : "+ch);
 	}
-/*	public void printData()
+	public void printData()
 	{
 		int a;
 		int b;
-		System.out.println("a value : "+a);
-		System.out.println("b value : "+b);
-	}*/
+		System.out.println("a value : "+a);   //error : asks to intialize variable a
+		System.out.println("b value : "+b);   // error : asks to intialize variable b
+	}
 }
 class singleton
 {
@@ -37,7 +37,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		data d = new data();
 		d.print();
-		//d.printData();
+		d.printData();
       singleton sg = singleton.meth("Sreeja");
       	sg.normal();
 	}
