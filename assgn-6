@@ -38,17 +38,13 @@ public class Main {
     }
 
     public static void main(String[] args){
-        //for (int number = 1000; number < 10000; number++)
-        int number=1260;
-        int count=0;
-        while(count<100){
+        for (int number = 1000; number < 10000; number++)
+        {
             int[] arr = new int[2];
             if(isVampire(number, arr))
             {
                 System.out.println(number);
             }
-            number++;
-            count++;
         }
     }
 }
