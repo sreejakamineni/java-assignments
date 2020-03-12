@@ -37,9 +37,9 @@ class Listoffiles
 }
 class Main
 {
-    public static void main(String args[]) throws NullPointerException
+    public static void main(String args[]) 
     {
         Listoffiles lo = new Listoffiles();
-        lo.matching("*.txt","/home");
+        lo.matching(".*/*.txt","/home");
     }
 }
