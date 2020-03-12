@@ -6,6 +6,8 @@ class Listoffiles
 {
     public void matching(String reg,String path) throws NullPointerException
     {
+    try
+    {
         File f = new File(path);
         if(!f.exists())
         {
@@ -28,6 +30,10 @@ class Listoffiles
             }
         }
     }
+    catch (Exception e)
+    {
+    System.out.println("no file");
+}
 }
 class Main
 {
