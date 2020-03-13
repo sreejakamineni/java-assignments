@@ -1,43 +1,53 @@
+package com.company;
+
 import java.io.*;
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.regex.Pattern;
+import java.lang.NullPointerException;
 
-class Listoffiles
-{
-    public void matching(String reg,String path) throws NullPointerException
-    {
-    try
-    {
-        File f = new File(path);
-        if(!f.exists())
-        {
-            return;
-        }
-        File [] allsubfiles = f.listFiles();
-        for(File subfile : allsubfiles)
-        {
-            if(subfile.isDirectory())
-            {
-                matching(reg,subfile.getAbsolutePath());  // Recursive call if it is a directory, to check the files inside it.
+class Listoffiles {
+/* the function is checking wether the file is matching with the regular expression
+
+
+ * Input : regular expression followed by path.
+ * String reg : refers to the regular expression to be given
+ * String path : refers to the directory path.
+ * Output : absolute path of the files that matches with regular expression
+ */
+    public void matching(String reg, String path) throws NullPointerException {
+        Logger LOGGER =
+                Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+        try {
+            File f = new File(path);
+            if (!f.exists()) {
+                return;
             }
-            else
-            {
-                String filename=subfile.getName();
-                if(Pattern.matches(reg,filename))
-                {
-                    System.out.println(subfile.getAbsolutePath());
+            File[] allsubfiles = f.listFiles();
+            for (File subfile : allsubfiles) {
+                if (subfile.isDirectory()) {
+                    matching(reg, subfile.getAbsolutePath());  // Recursive call if it is a directory, to check the files inside it.
+                } else {
+                    String filename = subfile.getName();
+                    if (Pattern.matches(reg, filename))
+                    {
+                        LOGGER.log(Level.INFO, (subfile.getAbsolutePath()));
+                    }
+
                 }
             }
         }
+        catch (Exception e)
+        {
+            LOGGER.log(Level.INFO,"not a txt  file");
+        }
     }
-    catch (Exception e)
-    {
-    System.out.println("no file");
 }
-}
+
 class Main
 {
-    public static void main(String args[]) 
+    public static void main(String args[])
     {
         Listoffiles lo = new Listoffiles();
         lo.matching(".*/*.txt","/home");
