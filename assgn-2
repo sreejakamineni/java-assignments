@@ -1,8 +1,22 @@
 package com.company;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
 class Alpha
 {
-    public void function(String s)  // this function takes the given string 
+    /* This function check wether the given string contains all the alphabets.
+
+
+     * @param s the input string taken.
+     *Input : a string s.
+     *Output: True or False.
+     */
+
+
+    public void function(String s)
     {
+        Logger LOGGER =
+                Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
         int val,t;
         int count =0;
@@ -10,7 +24,7 @@ class Alpha
         {
             val= s.indexOf(s.charAt(i)); //here val stores the index value where it first occured
             t= s.indexOf(val,s.charAt(i));// it checks for the requried chareter index after val index
-            if(t<val) // checking if it is unique 
+            if(t<val) // checking if it is unique
             {
                 count++;
             }
@@ -18,24 +32,25 @@ class Alpha
         }
         if(count==26)  // if the count is 26 it means all the alphabets are present
         {
-            System.out.println("true");
+            LOGGER.log(Level.INFO,"true");
         }
         else
         {
-            System.out.println("false");
+            LOGGER.log(Level.INFO,"false");
         }
 
 
-        }
     }
+}
 
 
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        // write your code here
         Alpha a = new Alpha();
-        a.function("abcdefghijklmno");
+        a.function("abcdefghijklmnopqrstuvwxyz");
     }
 }
+
 
