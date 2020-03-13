@@ -12,8 +12,8 @@ class Listoffiles {
 
 
  * Input : regular expression followed by path.
- * String reg : refers to the regular expression to be given
- * String path : refers to the directory path.
+ * @param reg  refers to the regular expression to be given
+ * @ param path  refers to the directory path.
  * Output : absolute path of the files that matches with regular expression
  */
     public void matching(String reg, String path) throws NullPointerException {
