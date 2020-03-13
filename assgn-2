@@ -22,15 +22,15 @@ class Alpha
         int count =0;
         for(int i=0;i<s.length();i++)
         {
-            val= s.indexOf(s.charAt(i)); //here val stores the index value where it first occured
-            t= s.indexOf(val,s.charAt(i));// it checks for the requried chareter index after val index
+            val= s.indexOf(s.charAt(i)); 
+            t= s.indexOf(val,s.charAt(i));
             if(t<val) // checking if it is unique
             {
                 count++;
             }
 
         }
-        if(count==26)  // if the count is 26 it means all the alphabets are present
+        if(count==26)  
         {
             LOGGER.log(Level.INFO,"true");
         }
