@@ -1,46 +1,63 @@
 package yourname.assignment;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 class data
 {
-	int i;
-	char ch;
-	public void print()
-	{
-		System.out.println("i value : "+i);
-		System.out.println("ch value : "+ch);
-	}
-	public void printData()
-	{
-		int a;
-		int b;
-		System.out.println("a value : "+a);   //error : asks to intialize variable a
-		System.out.println("b value : "+b);   // error : asks to intialize variable b
-	}
+    int i;
+    char ch;
+    /* adding a method to print these variables
+     */
+    Logger LOGGER =
+            Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+
+    public void print()
+    {
+       LOGGER.log (Level.INFO,"i value : "+i);
+        LOGGER.log(Level.INFO,"ch value : "+ch);
+    }
+    /* adding an other method with two local variables and printing their values without initializing them.
+     */
+  /*  public void printData()
+    {
+        int a;
+        int b;
+        System.out.println("a value : "+a);   //error : asks to intialize variable a
+        System.out.println("b value : "+b);   // error : asks to intialize variable b
+    } */
 }
 class singleton
 {
-	String s;
-	public static singleton meth(String s)
-	{
-	    singleton si = new singleton();
-	    si.s=s;
-	    return si;
-	}
-	public void normal()
-	{
-		System.out.println("string is : "+s);
-	}
+    String s;
+    /* Adding a static method that takes String as parameter and initialize the member variable and then return object of that class
+     */
+    Logger LOGGER =
+            Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+    public static singleton meth(String s)
+    {
+        singleton si = new singleton();
+        si.s=s;
+        return si;
+    }
+    /* Adding a non static method to print the String.
+     */
+    public void normal()
+    {
+        LOGGER.log(Level.INFO,"string is : "+s);
+    }
 }
 
 public class Main {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		data d = new data();
-		d.print();
-		d.printData();
-      singleton sg = singleton.meth("Sreeja");
-      	sg.normal();
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        data d = new data();
+        d.print();
+      //  d.printData();
+        singleton sg = singleton.meth("Sreeja");
+        sg.normal();
+    }
 
 }
 
