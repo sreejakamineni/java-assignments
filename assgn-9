@@ -5,7 +5,15 @@ import java.util.regex.Pattern;
 import java.util.regex.*;
 
 class Test
-{
+{ 
+/* this function uses aregular expression that checks a sentence to see that it begins with a capital letter 
+and ends with a period.
+
+* @param s reads the given string.
+* Input : a string.
+* Output : True or False.
+*/
+
     public boolean write(String s)
     {
         String regex = "[A-Z].*[.]";
