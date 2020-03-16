@@ -1,6 +1,14 @@
-ackage com.company;
+package com.company;
 
 public class Main {
+ /* this function checks whether the given number is vampire numbers
+
+     * @param number the number that is being checked.
+     * @param arr to array to store the digits of the number.
+     * Input : numbers in the given range.
+     * Output :  vampire numbers in the given range.
+     */
+
     public static boolean isVampire(int number, int[] arr){
         int num1 = number / 100;
         int num2 = number % 100;
