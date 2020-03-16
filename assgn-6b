@@ -1,6 +1,7 @@
 package com.company;
 class con
-{
+{ 
+/* created a constructor that takes string as an arguments & prints it */
     public con(String s)
     {
         System.out.println(s);
