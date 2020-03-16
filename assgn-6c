@@ -1,12 +1,25 @@
 package com.company;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 class con
 {
+    /* Creating a class with a constructor that takes a String argument. During construction, printing the argument
+     */
+    Logger LOGGER =
+            Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+
+
     public con(String s)
     {
-        System.out.println(s);
+        LOGGER.log(Level.INFO,s);
     }
 }
 public class Main {
+
+    /* creating objects to attach to the array of references.
+     */
 
     public static void main(String[] args) {
         // write your code here
