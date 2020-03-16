@@ -11,7 +11,7 @@ class Count
 {
     public void letter() throws Exception
     {
-        File f = new File("/home/sreeja/Desktop/f1");
+        File f = new File("/home/sreeja/Desktop/upload/input");
         FileReader fr = new FileReader(f);
         HashMap<Character,Integer > map = new HashMap   <Character,Integer>();
         int i;
