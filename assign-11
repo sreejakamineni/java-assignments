@@ -9,6 +9,11 @@ import java.util.Map;
 
 class Count
 {
+/* this function takes the path of the file and counts all charecters in the file.
+
+* Input : file path.
+* Output : no.of times each charecter is present in the file.
+*/
     public void letter() throws Exception
     {
         File f = new File("/home/sreeja/Desktop/upload/input");
